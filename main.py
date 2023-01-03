@@ -35,7 +35,7 @@ routes = web.RouteTableDef()
 
 @routes.get("/")
 async def main(_):
-    return web.Response(status=405, text="405: Method Not Allowed")
+    return web.Response(status=200, text="The server is running!")
 
 
 @routes.post("/")
