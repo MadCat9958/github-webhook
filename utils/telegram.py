@@ -51,8 +51,7 @@ async def send_message(session: ClientSession,
         disable_web_page_preview=True,
         disable_notification=True
     )
-    async with session.post(api_url,
-                            data=data) as resp:  # type: ClientResponse
+    async with session.post(api_url, data=data) as resp:  # type: ClientResponse
         logging.info('%s, %s, %s', str(chat_id), str(resp.status), repr(text))
         tg_response = await resp.json()
         logging.info("Telegram response: %s", tg_response)
