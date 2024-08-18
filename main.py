@@ -51,6 +51,7 @@ async def github_webhook_post_handler(request: Request) -> Response:
 if __name__ == "__main__":
     # FORMAT = "[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s"
     # logging.basicConfig(level=logging.INFO, format=FORMAT)
+    # why?
     app = web.Application()
     app.add_routes(routes)
     web.run_app(app, port=PORT)
