@@ -130,8 +130,8 @@ async def _format_issues(payload: dict) -> str:
     )
 
 
-async def _format_ping(_: dict) -> None:
-    return None
+async def _format_ping(_: dict) -> str:
+    return "Ping!"
 
 
 async def _format_public(payload: dict) -> str:
